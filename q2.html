@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+
+        .card {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        My Portfolio
+    </header>
+    <div class="container">
+        <div class="card">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATYAAACjCAMAAAA3vsLfAAAAkFBMVEXp6O4AZsv///8AZMsAXMny7/DJ0ec9ec8hc9AAYMoAW8kAX8oAWcjv7O8AYsoxeM+0xONwmdg/fdGft+CCpNsAaMx1nNjb4Ox8o94AVseWst5EgdLM1umQrd1hkNWlv+jh6ve+zObj7Pj1+f3F1vBUi9YVbc3T4fTK2vHU3Ou5zu2QsePr8vqdueaqxOnY5PVKEeloAAAEcUlEQVR4nO2da3OiMBSGhSSuCZcqYOut1G1rvbRd//+/2wC6tnVVDAFnDu/zyXHUmTxzciGJ53Q6AAAAAAAAAAAAAAAAAAAAAAAAACBGkCEqkP/ArVvRLIHozPqTZJAuplH063qi6SIdJJP+rCNaYy4Q3STyfO5JGYbMCP29UEqPKy9Kuq0wF3TinpLMsQSTfi+m31lFzLg1Zztz3InFrdtVK8H6jtt1VsDv1oQDTsQqrMOa44SKbsCJxK9HWoafEPUmRjVaI+tNTFSd1rS3CUFvwe9aYy339pvgvDC0vO44hg1v3UbriHtZtzXHkffUuum6lvXaT/j61u20i0gbCDYdbimtcHtoJNh0uD3cuqU2CR69ZrR5j5QmU3FX+zRawO4o9dKHmle6BxShXhr0Gxra9ODWp9NLg8dG5tEMmdDRJtKa9ouOCQktQRqbEWjNCaIxa9obHW1B7ZsfB3w6Y1tz6w9SK5B1k9rIPM0Hswa18dmtm2uNWWOrXVLauk1q65KZE5rVduvWWgPajIA2I6DNCGgz4rQ2JjlXvs+5tRtv9LUxz++NnlbL+Xa1SSJl594beW2cvT+7Bz6eesqCOOLapHxyf7J5qz4I0tbmpy9H1jTJGNr+caxtfBxqBa9VOyplbf7rCWuuO684pxLWNj5tTXurNr7R1aY+z1jT/bTS+EZWm1yctabnhSrxRlYb/7igzX2rMLxR1ea9X7LmbvzS/75qj7b/Lti+M+2V5M1XshXa5OiytWtYDsZt0OYv7Wpz3ZXXAm3OrrEfyZscji7ODmXYcvLawrRo6tLz9HAu1cqGtz+KujZZzKMv+0coZSXevqxYaGrjm7ydyX48kvc2tL1L6tqKx9Hev/AY2tC24dS1FYPZ4XalLLGMu8iKvDZEW2kwthlxeiZlmElPc2rdxiQ/t2GZMd/vnn/u/D7/fMNtw7rt8JQwKvOUsJXjIjxH42H+2Xm4eyMZO8/7D329dUhU21XPpEvOHD/RLwbcYewj06jfyDYD7pXDwnn+odW3PRCi2q7ZAVnmYaQ1pdkPhPJ5m59rqUGmMTvV37ZmB+Sa/bbd1yQr4onJXVxJZ/fCa81+W5nd3Vf/xNbtEe3Z3cVZQllwcmXEdeekK5yTFuBU3gjcATECN46MwP02I8rfpqyeLoS4Nt1AB3d3z3Lqgr1UuCl+BvwvwQj8C8YIaDMC2oyANiOgzQhoMwKZGYyANiOQdcYI5DgyAhm1jED+NiOQLdAI5KY0AplQjUDeXTOaysROLBc7coob0VgGe0kqgz3qJZiB6hxmNLMJwqmV8kPlIUOG9WujV+cKVdUMEZOavZGs4Vd7xUg1ImkN9UlNEbHtust7GKdbDTfLZV9X7eUZwdngCyJ27Ff6ZjFtaZogiHu+zbryqg115TWB6CaRp7gnZcjC0rmzvqG/KKXHlRclXdEGaTmB6Mz6k2SQLqZR9Ot6oukiHSST/qzTHmcFQYaoQP4Dt24FAAAAAAAAAAAAAAAAAAAAAAAAAGzzF5QFbr/hRj20AAAAAElFTkSuQmCC" alt="password generator">
+            <h2>password generator</h2>
+            <p>This python project helps to generate strong passwords</p>
+          </div>
+          <div class="card">
+            <img src="data:image/png;base64,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" alt="To-Do List">
+            <h2>To-Do List</h2>
+            <p>A simple to-do list application that allows users to add, edit, and delete tasks. The application will also allow users to mark tasks as completed.</p>
+          </div>
+        <div class="card">
+            <img src ="data:image/jpeg;base64,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" alt="Calculator"/>
+            <h2>Basic Calculator</h2>
+            <p>This python project allows users to do basic mathematical calculations</p>
+        </div>
+    </div>
+</body>
+</html>
